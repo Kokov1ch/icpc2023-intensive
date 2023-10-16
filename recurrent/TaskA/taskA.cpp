@@ -36,11 +36,11 @@ public:
         }
 
         for (int len = 2; len <= s; len++) {
-            for (int i = 0; i + len - 1 < s; i++) {
-                int j = i + len - 1;
-                dp[i][j] = INT_MAX;
-                for (int k = i; k < j; k++) {
-                    dp[i][j] = min(dp[i][j], dp[i][k] + dp[k + 1][j] + rows[i][0] * rows[k][1] * rows[j][1]);
+            for (int l = 0; l + len - 1 < s; l++) {
+                int r = l + len - 1;
+                dp[l][r] = INT_MAX;
+                for (int k = l; k < r; k++) {
+                    dp[l][r] = min(dp[l][r], dp[l][k] + dp[k + 1][r] + rows[l][0] * rows[k][1] * rows[r][1]);
                 }
             }
         }
