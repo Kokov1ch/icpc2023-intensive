@@ -47,15 +47,8 @@ ll factorial(int value)
         return value * factorial(value-1) % MOD;
 }
 
-void solve() {
-    int n, k;
-    cin >> n >> k;
-    cout << (factorial(n) * modInverse(factorial(k) * factorial(n - k) % MOD)) % MOD;
-}
-
-int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-    solve();
-    return 0;
-}
+//void solve() {
+//    int n, k;
+//    cin >> n >> k;
+//    cout << (factorial(n) * modInverse(factorial(k) * factorial(n - k) % MOD)) % MOD;
+//}
