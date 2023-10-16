@@ -14,7 +14,7 @@
 #define MOD 1'000'000'007
 using namespace std;
 
-class taskB {
+class taskC {
 
 private:
     ll gcd(ll a, ll b, ll &x, ll &y) {
@@ -37,19 +37,21 @@ private:
         return x;
     }
 
-    ll factorial(int value) {
-
-        if (value == 1 || value == 0) {
-            return 1;
-        } else
-            return value * factorial(value - 1) % MOD;
+    void factorial(vector<ll> &values, ll n) {
+        values[0] = 1;
+        for (int i = 1; i <= n; i++)
+        {
+            values[i] = values[i - 1] * i % MOD;
+        }
     }
 
 public:
     void solve() {
-        int n, k;
+        ll n, k;
         cin >> n >> k;
-        cout << (factorial(n) * modInverse(factorial(k) * factorial(n - k) % MOD)) % MOD;
+        vector<ll> fact(n + 1);
+        factorial(fact, n);
+        cout << (fact[n] * modInverse(fact[k] * fact[n - k] % MOD)) % MOD;
     }
 
 };
