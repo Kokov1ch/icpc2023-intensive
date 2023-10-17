@@ -14,7 +14,7 @@
 #define ll long long
 using namespace std;
 
-class taskA { ;
+class taskA {
 public:
     void solve() {
         ifstream in("input.txt");
