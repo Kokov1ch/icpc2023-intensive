@@ -3,10 +3,11 @@
 #include "recurrent/TaskB/taskB.cpp"
 #include "recurrent/TaskC/taskC.cpp"
 #include "recurrent/TaskD/taskD.cpp"
+#include "recurrent/TaskE/taskE.cpp"
 using namespace std;
 
 int main() {
-    taskC task;
+    taskE task;
 
     task.solve();
     return 0;
